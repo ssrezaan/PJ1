@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTube MP4 Lab</title>
+  <meta name="description" content="วางลิงก์ YouTube แล้วรับลิงก์ดาวน์โหลด MP4 แบบรวดเร็ว พร้อมตั้งชื่อไฟล์อัตโนมัติ เพลง(ศิลปิน).mp4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="halo halo-left" aria-hidden="true"></div>
+  <div class="halo halo-right" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">NETLIFY READY APP</p>
+      <h1>QuickTube MP4 Lab</h1>
+      <p class="lead">
+        วางลิงก์ YouTube แล้วระบบจะสร้างลิงก์ดาวน์โหลด MP4 ให้ทันที
+        พร้อมตั้งชื่อไฟล์อัตโนมัติแบบ <strong>เพลง(ศิลปิน).mp4</strong>
+      </p>
+      <div class="badge-row">
+        <span class="badge">Direct MP4 Link</span>
+        <span class="badge">Auto Filename</span>
+        <span class="badge">Mobile Friendly</span>
+      </div>
+    </section>
+
+    <section class="studio">
+      <form id="download-form" class="form" novalidate>
+        <label for="url-input">ลิงก์ YouTube</label>
+        <div class="input-row">
+          <input
+            id="url-input"
+            type="url"
+            placeholder="https://www.youtube.com/watch?v=..."
+            autocomplete="url"
+            inputmode="url"
+            required
+          >
+          <button id="submit-btn" type="submit">
+            <span class="btn-title">สร้างลิงก์ MP4</span>
+            <span class="btn-sub">ใช้งานฟรี</span>
+          </button>
+        </div>
+        <p class="helper">รองรับทั้งลิงก์จาก `youtube.com` และ `youtu.be`</p>
+      </form>
+
+      <div id="result" class="result hidden" aria-live="polite">
+        <p id="result-text"></p>
+        <p id="result-meta" class="muted"></p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h2>รูปแบบชื่อไฟล์</h2>
+          <p>ตัวอย่างชื่อไฟล์ที่ระบบตั้งให้อัตโนมัติ</p>
+          <code>คืนจันทร์(LOSO).mp4</code>
+        </article>
+
+        <article class="info-card">
+          <h2>ข้อควรทราบ</h2>
+          <ul>
+            <li>ลิงก์ดาวน์โหลดมีเวลาหมดอายุ ควรกดดาวน์โหลดทันที</li>
+            <li>บางคลิปอาจไม่มีสตรีม MP4 ที่มีทั้งภาพและเสียง</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

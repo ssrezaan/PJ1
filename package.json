@@ -1,0 +1,13 @@
+{
+  "name": "ytmp4-netlify",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Fast YouTube to MP4 web app for Netlify",
+  "scripts": {
+    "build": "node -e \"console.log('Static site: no build step required')\"",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.12"
+  }
+}
